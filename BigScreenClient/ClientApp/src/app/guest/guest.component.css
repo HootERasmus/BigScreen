@@ -1,0 +1,11 @@
+.component-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-height: 100vh;
+    height: 100vh;
+}
+
+.center {
+    grid-row-start: 2;
+    grid-row-end: 12;
+}

@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.my-section {
+  width: 200px;
+  border: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .active{
+  border : 1px solid black;
+  padding : 1rem;
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.not-active {
+  border : 1px solid black;
+  padding : 1rem;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: green;
+}
+
+.next {
+  animation: exit 1s 0s ease-in forwards, enter 1s 1s ease-in forwards
+}
+
+@keyframes exit {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(150%); }
+}
+
+@keyframes enter {
+  0% { 
+    transform: translateX(-150%); 
+    background-color: white;
+  }
+  100% { 
+    transform: translateX(0%); 
+    background-color: white;
+  }
+} */
