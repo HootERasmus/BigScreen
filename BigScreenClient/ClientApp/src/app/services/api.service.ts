@@ -19,7 +19,7 @@ export class ApiService {
   private urlBase: string;
   
   constructor(private http: HttpClient) {
-    this.urlBase = "http://192.168.0.6:5000/api"
+    this.urlBase = "http://localhost:5000/api"
    }
   
 

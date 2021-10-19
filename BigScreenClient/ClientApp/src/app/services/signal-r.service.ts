@@ -14,7 +14,7 @@ constructor() {}
 private hubConnection: signalR.HubConnection
   public startConnection(func) {
     this.hubConnection = new signalR.HubConnectionBuilder()
-                            .withUrl('http://192.168.0.6:5000/chathub')
+                            .withUrl('http://localhost:5000/chathub')
                             .build();
     this.hubConnection
       .start()
