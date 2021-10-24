@@ -13,11 +13,12 @@ function JoinGroup() {
         NavigationService.groupName = target.groupName.value;
 
         history.push('/guest');
+        console.log("test");
     }
 
     return (
         <div className='mt-2'>
-            <form className='form' onSubmit={() => onSubmit}>
+            <form className='form' onSubmit={onSubmit}>
                 <div className='form-group'>
                     <input type='text' className='form-control' placeholder='Group name' name='groupName'/>
                 </div>

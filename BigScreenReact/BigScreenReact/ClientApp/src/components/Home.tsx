@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useHistory } from 'react-router-dom'
 import JoinGroup from "./JoinGroup";
 import { useService } from "../services/serviceContext";
@@ -6,7 +6,7 @@ import { useService } from "../services/serviceContext";
 function Home() {
     const history = useHistory();
     useService().startConnection(() => {});
-
+    
     function handleClick(path: string) {
         history.push(path);
     }

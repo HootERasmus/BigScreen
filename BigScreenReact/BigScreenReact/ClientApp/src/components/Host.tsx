@@ -64,7 +64,7 @@ function Host() {
                 <button className="btn btn-danger mx-3 col-sm-2 mb-2" onClick={() => pass()}>Pass</button>
                 <button className="btn btn-info mx-3 col-sm-2 mb-2" onClick={() => reset()}>New Game</button>
                 <button className="btn btn-info mx-3 col-sm-2 mb-2" onClick={() => next()}>Next</button>
-                <button className="btn btn-success mx-3 col-sm-2 mb-2" onClick={() => correct}>Correct</button>
+                <button className="btn btn-success mx-3 col-sm-2 mb-2" onClick={() => correct()}>Correct</button>
             </div>
         </div>
         

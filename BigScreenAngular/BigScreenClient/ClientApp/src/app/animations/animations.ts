@@ -4,7 +4,7 @@ import { Utils } from "../utils"
 export const Animations = {
     slideInOut:  trigger('slideInOut', [
         state(Utils.STATE_TRANSITION_ON, style({ transform: 'translate(0%)' })),
-        state(Utils.STATE_TRANSITION_OFF, style({  transform: 'translate(-150%)' })),
+        state(Utils.STATE_TRANSITION_OFF, style({ transform: 'translate(-150%)' })),
         
         transition('on => off', [
           animate("500ms 250ms ease-in", style({transform: 'translateX(150%)'})),

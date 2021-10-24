@@ -27,54 +27,16 @@ function ScreenCard() {
     }
     
     function toggle(answer: string, message: string) {
-        setAnswerState(answer);
-        resetOldAnswerState();
-
-        // switch (card1State) {
-        //     case Utils.STATE_TRANSITION_ON: 
-        //         setCard1State(Utils.STATE_TRANSITION_OFF);
-        //         setCard2State(Utils.STATE_TRANSITION_ON);
-        //         setCard2Message(message)
-        //         break;
-
-        //     case Utils.STATE_TRANSITION_OFF:
-        //         setCard1State(Utils.STATE_TRANSITION_ON);
-        //         setCard1Message(message)
-        //         setCard2State(Utils.STATE_TRANSITION_OFF);
-        //         break;
-
-        //     default:
-        //         break;
-        // }
-
+        setCard1AnswerState(answer);
         setCard1Message(message);
-    }
-    
-    function resetOldAnswerState() {
-        if(card1State === Utils.STATE_TRANSITION_ON) {
-            setCard2AnswerState(Utils.STATE_ANSWER_NORMAL);
-        } else {
-            setCard1AnswerState(Utils.STATE_ANSWER_NORMAL);
-        }
-    }
-     
-    function setAnswerState(anwserState: string) {
-        if(card1State === Utils.STATE_TRANSITION_ON) {
-            setCard1AnswerState(Utils.STATE_ANSWER_NORMAL);
-        } else {
-            setCard2AnswerState(Utils.STATE_ANSWER_NORMAL);
-        }
     }
 
     return (
         <div className='grid-container'>
             <div className='grid'>
                 <div className='card1'>
-                    <Card cardMessage={card1Message} answerState={card1State}></Card>
+                    <Card cardMessage={card1Message} answerState={card1AnswerState}></Card>
                 </div>
-                {/* <div className='card2'>
-                    <Card cardMessage={card2Message} answerState={card2State}></Card>
-                </div> */}
             </div>
         </div>
     )

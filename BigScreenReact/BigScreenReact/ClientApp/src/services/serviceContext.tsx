@@ -16,8 +16,8 @@ export interface IService {
     SendToGroup: (groupName: string, anwser: string, message: string) => void
 }
 
-const service = new SignalRService
-const api = new ApiService
+const service = new SignalRService()
+const api = new ApiService()
 
 const defaultState = {
     createGame: api.createGame,

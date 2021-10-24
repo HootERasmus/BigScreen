@@ -1,0 +1,14 @@
+.background-normal {
+    background-color: white;
+}
+
+.background-pass {
+    background-color: #dc3545;
+    color: white;
+}
+
+.background-correct {
+    background-color: #28a745;
+    color: white;
+}
+

@@ -1,28 +1,33 @@
-import React, {useEffect, useState, forwardRef, useImperativeHandle} from 'react'
+import React, {useEffect, useState} from 'react'
 import { Utils } from '../utils';
-
+import './card.css';
 interface ICard {
     cardMessage: string;
     answerState: string;
-    // movementState: string;
 }
 
-interface ICardUseState {
-    setCardMessate: React.Dispatch<React.SetStateAction<string>>
-    setAnswerState: React.Dispatch<React.SetStateAction<string>>
-}
+function Card(props: ICard) {
+    const [color, setColor] = useState("background-normal");
 
-const Card = forwardRef((props: ICard, ref) => {
-    
-    // useEffect(() => {
-    //     props.cardMessage = "Tester"
-    //     props.answerState = Utils.STATE_ANSWER_NORMAL
-    // }, [])
+    useEffect(() => {
+        switch(props.answerState) {
+            case Utils.STATE_ANSWER_NORMAL:
+                setColor("background-normal");
+                break;
+
+            case Utils.STATE_ANSWER_PASS:
+                setColor("background-pass");
+                break;
+
+            case Utils.STATE_ANSWER_CORRECT:
+                setColor("background-correct");
+                break;
+        }
+    })
 
     return (
         <div className="row text-center h-100 px-5">
-            <div className="card col-sm-12 shadow"> 
-            {/* [@slideInOut]="movementState" [@answer]="answerState" */}
+            <div className={color + " card col-sm-12 shadow"}> 
                 <div className="card-body text-center center-my-text">
                     <h1>{props.cardMessage}</h1>
                 </div>
@@ -30,6 +35,6 @@ const Card = forwardRef((props: ICard, ref) => {
         </div> 
     )    
 
-});
+};
 
 export default Card;
