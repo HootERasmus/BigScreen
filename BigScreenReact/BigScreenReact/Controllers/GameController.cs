@@ -1,16 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using BigScreenReact.Models;
 
 namespace BigScreenReact.Controllers
 {
-    public class GameController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class GameController : ControllerBase
     {
-        public IActionResult Index()
+        // GET api/<GameController>
+        [HttpGet()]
+        public IActionResult Get([FromQuery] int numberOfWords)
         {
-            return View();
+            return Ok(new { words = Game.NewGame(numberOfWords) });
         }
     }
 }

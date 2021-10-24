@@ -1,12 +1,11 @@
 import http from "./http-common";
 export class GetInfo {
-    words: string[];
+    words = [''];
 }
 
-const ApiService = {
+class ApiService {
     createGame(maxNumberOfWords: number): Promise<GetInfo> {
-        return http.get("/game?numberOfWords=" + maxNumberOfWords);
-        
+        return http.get<GetInfo>("/game?numberOfWords=" + maxNumberOfWords).then(res => res.data);
     }
 }
 
